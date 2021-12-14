@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "COMMIT_EDITMSG": "git-commit",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "iostream": "cpp"
+    }
+}

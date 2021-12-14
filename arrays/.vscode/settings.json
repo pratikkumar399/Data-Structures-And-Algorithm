@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "COMMIT_EDITMSG": "git-commit",
+        "iostream": "cpp",
+        "regex": "cpp",
+        "string_view": "cpp",
+        "*.tcc": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "ostream": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "algorithm": "cpp"
+    }
+}

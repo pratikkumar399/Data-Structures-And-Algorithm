@@ -1,0 +1,5 @@
+1. Declare a character stack
+2.Enter the string that you want to push in the stack
+3.Make a push function and using the strcpy inbulit function push the string in the stack
+4.Print the string that you have pushed in the stack
+5.End the program 

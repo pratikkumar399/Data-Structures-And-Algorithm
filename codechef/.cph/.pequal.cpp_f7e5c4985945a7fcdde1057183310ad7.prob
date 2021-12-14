@@ -1,0 +1,1 @@
+{"name":"Local: pequal","url":"e:\\CoderISP\\DataStructures\\codechef\\pequal.cpp","tests":[{"id":1639243743153,"input":"3\nNNN\nPNP\nNPNPNPNNP","output":"2\n0\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\codechef\\pequal.cpp","group":"local","local":true}

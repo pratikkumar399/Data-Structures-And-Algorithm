@@ -1,0 +1,1 @@
+{"name":"Local: implement_permutation","url":"e:\\CoderISP\\DataStructures\\codechef\\implement_permutation.cpp","tests":[{"id":1639236640682,"input":"4\n2\n3\n4\n5","output":"2 1 \n1 3 2 \n1 3 4 2 \n4 5 2 3 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\codechef\\implement_permutation.cpp","group":"local","local":true}

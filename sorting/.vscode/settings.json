@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "COMMIT_EDITMSG": "git-commit",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "algorithm": "cpp"
+    }
+}
