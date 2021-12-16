@@ -1,0 +1,1 @@
+{"name":"Local: antipal","url":"e:\\CoderISP\\DataStructures\\codechef\\antipal.cpp","tests":[{"id":1639585311613,"input":"2\n9\n8","output":"-1\n10010110"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\codechef\\antipal.cpp","group":"local","local":true}
