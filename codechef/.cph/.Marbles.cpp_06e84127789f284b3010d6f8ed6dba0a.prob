@@ -1,0 +1,1 @@
+{"name":"Local: Marbles","url":"e:\\CoderISP\\DataStructures\\codechef\\Marbles.cpp","tests":[{"id":1640184738482,"input":"3\n5\nab?c?\naeg?k\n6\nabcde?\nehio??\n4\nabcd\nabcd","output":"4\n6\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\codechef\\Marbles.cpp","group":"local","local":true}
