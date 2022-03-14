@@ -1,0 +1,1 @@
+{"name":"Local: easyandhard","url":"e:\\CoderISP\\DataStructures\\codechef\\easyandhard.cpp","tests":[{"id":1646232323883,"input":"3\n15 9 3\n5 3 0\n6 2 8","output":"Qualify\nNotQualify\nQualify"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\codechef\\easyandhard.cpp","group":"local","local":true}

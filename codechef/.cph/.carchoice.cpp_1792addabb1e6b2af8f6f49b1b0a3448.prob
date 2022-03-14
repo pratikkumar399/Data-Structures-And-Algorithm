@@ -1,0 +1,1 @@
+{"name":"Local: carchoice","url":"e:\\CoderISP\\DataStructures\\codechef\\carchoice.cpp","tests":[{"id":1646233375059,"input":"3\n10 5 3 20\n7 2 7 2\n1 5 3 2","output":"-1\n0\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\codechef\\carchoice.cpp","group":"local","local":true}

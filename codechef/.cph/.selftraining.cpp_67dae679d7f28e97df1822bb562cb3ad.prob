@@ -1,0 +1,1 @@
+{"name":"Local: selftraining","url":"e:\\CoderISP\\DataStructures\\codechef\\selftraining.cpp","tests":[{"id":1646232816340,"input":"3\n3\n15 23 65\n3\n15 62 16\n2\n35 9\n","output":"2\n2\n1\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\codechef\\selftraining.cpp","group":"local","local":true}

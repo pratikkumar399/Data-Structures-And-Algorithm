@@ -1,0 +1,1 @@
+{"name":"Local: HungryAshish","url":"e:\\CoderISP\\DataStructures\\codechef\\HungryAshish.cpp","tests":[{"id":1642948786210,"input":"3\n50 40 60\n40 55 39\n30 42 37","output":"PIZZA\nBURGER\nNOTHING"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\codechef\\HungryAshish.cpp","group":"local","local":true}
