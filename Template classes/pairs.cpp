@@ -14,6 +14,8 @@ void sortingChar(int numbers[], char b[], int n)
     }
 }
 
+
+
 int main()
 {
     int numbers[4] = {3, 2, 1, 4};
