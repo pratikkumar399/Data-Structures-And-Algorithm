@@ -28,18 +28,18 @@ int main()
 
     int n;
     cin >> n;
-    // for (int i = 0; i < n; i++)
-    // {
-    //     int x;
-    //     cin >> x;
-    //     printVect(v);
-    //     v.push_back(x); // time complexity is O(1)
-    // }
-    // printVect(v) ;
-    // v.pop_back(); //pops or removes last element // O(1)
-    // printVect(v1) ;
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        printVect(v);
+        v.push_back(x); // time complexity is O(1)
+    }
+    printVect(v) ;
+    v.pop_back(); //pops or removes last element // O(1)
+    printVect(v1) ;
 
-    // vector<int> v2 = v ; //no changes will reflect in v 
+    vector<int> v2 = v ; //no changes will reflect in v 
 
     vector<string> vect ;
     for(int i = 0 ; i < n; i++){

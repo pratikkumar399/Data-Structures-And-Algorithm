@@ -6,5 +6,6 @@ int main(){
     cin>>n ;
     int m= n+10 ;
     cout<<m<<n;
+    
     return 0;
 }
