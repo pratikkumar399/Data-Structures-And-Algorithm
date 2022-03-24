@@ -1,0 +1,1 @@
+{"name":"Local: signmoves","url":"e:\\CoderISP\\DataStructures\\codechef\\signmoves.cpp","tests":[{"id":1648055148872,"input":"3\n1\n2\n3","output":"-1\n1\n-2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\codechef\\signmoves.cpp","group":"local","local":true}

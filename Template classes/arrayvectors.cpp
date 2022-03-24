@@ -19,7 +19,7 @@ int main()
         int n ;
         cin >> n ;
 
-        for(int j = 0; j < N; j++){
+        for(int j = 0; j < n; j++){
             int x ;
             cin >> x ;
             v[i].push_back(x);

@@ -1,0 +1,1 @@
+{"name":"Local: groupassignment","url":"e:\\CoderISP\\DataStructures\\codechef\\groupassignment.cpp","tests":[{"id":1648053450530,"input":"3\n2 2\n3 1\n3 4\n","output":"3\n6\n3\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\codechef\\groupassignment.cpp","group":"local","local":true}

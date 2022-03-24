@@ -106,7 +106,7 @@ int main()
     pratik.push_back(4);
     pratik.push_back(5); //-> {1,2,3,4,5}
 
-    // the following code prints 1 and 2 and  3 is excluded from the list
+    // the following code prints 1,2 and  3 is excluded from the list
     vector<int> pratik1(pratik.begin(), pratik.begin() + 2);
 
     // lower bound , upper bound

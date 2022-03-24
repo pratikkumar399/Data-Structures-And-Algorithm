@@ -1,0 +1,1 @@
+{"name":"Local: alternatingstrings","url":"e:\\CoderISP\\DataStructures\\codechef\\alternatingstrings.cpp","tests":[{"id":1648054386926,"input":"4\n3\n110\n4\n1010\n4\n0000\n7\n1101101","output":"3\n4\n1\n5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\codechef\\alternatingstrings.cpp","group":"local","local":true}

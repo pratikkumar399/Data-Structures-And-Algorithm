@@ -1,0 +1,1 @@
+{"name":"Local: firstandlastoccurence","url":"e:\\CoderISP\\DataStructures\\searching\\firstandlastoccurence.cpp","tests":[{"id":1648034502143,"input":"5\n1 2 3 3 4\n3","output":"2 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\searching\\firstandlastoccurence.cpp","group":"local","local":true}

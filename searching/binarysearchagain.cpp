@@ -42,7 +42,7 @@ int main()
     int ans = binarySearch(k, n, arr);
     if (ans != -1)
     {
-        cout << "element found at index := " << ans <<endl ;
+        cout << "element found at index := " << ans << endl;
     }
     else
     {
