@@ -1,0 +1,1 @@
+{"name":"Local: beautifulmatrix","url":"e:\\CoderISP\\DataStructures\\CodeForces\\beautifulmatrix.cpp","tests":[{"id":1648466866589,"input":"0 0 0 0 0\n0 0 0 0 0\n0 1 0 0 0\n0 0 0 0 0\n0 0 0 0 0\n","output":"1\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\CodeForces\\beautifulmatrix.cpp","group":"local","local":true}
