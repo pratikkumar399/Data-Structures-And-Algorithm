@@ -1,0 +1,1 @@
+{"name":"Local: recursionfactorial","url":"e:\\CoderISP\\DataStructures\\Recursion\\recursionfactorial.cpp","tests":[{"id":1650000900360,"input":"5","output":"120"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CoderISP\\DataStructures\\Recursion\\recursionfactorial.cpp","group":"local","local":true}

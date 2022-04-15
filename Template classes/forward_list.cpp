@@ -11,7 +11,8 @@ int main()
     l.pop_front();
     l.assign({10, 20, 30, 10}); // assigns a list of values
     l.remove(10);               // removes all the instances of the element
-
+    l.reverse() ; 
+    l.sort() ;
     for (int i : l)
     {
         cout << i << " " << endl;
