@@ -2,7 +2,7 @@
 using namespace std ;
 
 void display_stack(stack <int>  s){
-    while(!s.empty()){
+    while(!s.empty()){  
         cout<<'\t' <<s.top() ;
         s.pop() ;
     }
