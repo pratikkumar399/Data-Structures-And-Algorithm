@@ -5,15 +5,9 @@ codechef/.cph/.threetopics.cpp_dc42048cfcf271263bf69b724b05dabc.prob
 sorting/.cph/.insertionsort.cpp_98f9d7f2ba4541ac838f007a3ab55b9a.prob
 sorting/.cph/.selectionsorting.cpp_d66f3a82d6703d2ee081664a94c90788.prob
 sorting/.cph/
-
-codechef/akashandequal.cpp
-codechef/bestcoupan.cpp
-codechef/sastasharktank.cpp
-codechef/pseudosortedarray.cpp
 CodeForces/.cph
 hackerearth/.cph/
 codechef/.cph/
-
 /.bin
 Misc/.cph/
 codechef/.exe/
@@ -26,6 +20,7 @@ CodeForces/.cph/.petyastrings.cpp_3b0c55cdd9b0d04492335ccf60580e07.prob
 Recursion/.cph/.exe/
 *.exe
 *.prob
+*.bin
 CodeForces/.cph/.beautifulmatrix.cpp_a5a91fb4c7c33811b9fe7e186255d0c6.prob
 Template classes/oddevenincrements.bin
 Template classes/.cph/.arrayvectors.cpp_23a079f0dfedf2ec2d61ba4207f2277b.prob

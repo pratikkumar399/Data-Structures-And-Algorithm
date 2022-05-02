@@ -1,33 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
+    string str;
+    cin >> str;
+    set<char> st;
+    st.insert(str.begin() ,str.end()) ;
+    int ans =  st.size();
 
-    int n, m;
-    cin >> n >> m;
-
-    long long arr[n];
-
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-        arr[i] %= m ;
+    if( ans % 2 == 0){
+        cout<<"CHAT WITH HER!"<<endl ;
     }
-    sort(arr,arr+n);
-    int q;
-    cin >> q;
-    while (q--)
-    {
-        long long x;
-        cin >> x;
-        x %= m ;
-        long long *traverse =  upper_bound(arr , arr+n , m - x - 1) ;
-        if(traverse != arr){
-            traverse-- ;
-        }
-        cout<<max((arr[n-1] + x) % m  , (*traverse + x) % m)<<endl;
+    else{
+        cout<<"IGNORE HIM!"<<endl ;
     }
-
     return 0;
 }
