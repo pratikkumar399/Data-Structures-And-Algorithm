@@ -3,72 +3,18 @@ using namespace std;
 
 int main()
 {
-    int t;
-    cin >> t;
-    
-        int a[t][3];
 
-        for (int i = 0; i < t; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                cin >> a[i][j];
-            }
-        }
+    long long n;
+    cin >> n;
 
-        int ans1 = 0, ans2 = 0, ans3 = 0;
+    for (int k = 1; k <= n; k++)
+    {
+        long long a = k * k;
+        long long ans = a * (a - 1) / 2;
+        if (k > 2)
+            ans = ans - 4 * (k - 1) * (k - 2);
+        cout << ans << endl;
+    }
 
-        for (int i = 0; i < t; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                ans1 += a[i][0];
-                ans2 += a[i][1];
-                ans3 += a[i][2];
-            }
-        }
-
-        if (ans1==0 && ans2== 0 && ans3 == 0)
-        {
-            cout << "YES" << endl;
-        }
-        else
-        {
-            cout << "NO" << endl;
-        }
-
-        return 0;
-    
+    return 0;
 }
-
-
-// Another code
-
-// #include <bits/stdc++.h>
-// using namespace std;
-
-// int main()
-// {
-//     int t;
-//     cin >> t;
-//         int ans1 = 0, ans2 = 0, ans3 = 0;
-//     while (t--)
-//     {
-//         int x , y, z ;
-//         cin >> x >> y >> z ;
-//         ans1 += x ;
-//         ans2 += y ;
-//         ans3 += z ;
-//     }
-//         if (ans1==0 && ans2== 0 && ans3 == 0)
-//         {
-//             cout << "YES" << endl;
-//         }
-//         else
-//         {
-//             cout << "NO" << endl;
-//         }
-
-//         return 0;
-    
-// }
