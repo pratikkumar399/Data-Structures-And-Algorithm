@@ -35,7 +35,8 @@ void BFS(vector<int> adj[], int V)
     visited[s] = true;
     q.push(s);
 
-    while (!q.empty()) {
+    while (!q.empty())
+    {
         // Pop element at front and print
         int node = q.front();
         q.pop();
@@ -45,8 +46,10 @@ void BFS(vector<int> adj[], int V)
         // Traverse the nodes adjacent to the currently
         // poped element and push those elements to the
         // queue which are not already visited
-        for (int i = 0; i < adj[node].size(); i++) {
-            if (visited[adj[node][i]] == false) {
+        for (int i = 0; i < adj[node].size(); i++)
+        {
+            if (visited[adj[node][i]] == false)
+            {
                 // Mark it visited
                 visited[adj[node][i]] = true;
 
@@ -55,6 +58,73 @@ void BFS(vector<int> adj[], int V)
             }
         }
     }
+}
+
+// dfs traversal for finding bipartite graph
+
+bool dfs(int n, vector<int> &visited, vector<vector<int>> &graph)
+{
+    if (visited[n] == -1)
+        visited[n] = 1;
+    for (auto it : graph[n])
+    {
+        if (visited[it] == -1)
+        {
+            visited[it] = 1 - visited[n];
+
+            if (!dfs(it, visited, graph))
+            {
+                return false;
+            }
+        }
+        else if (visited[it] == visited[n])
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool bfs(int src, vector<vector<int>> &graph, vector<int> &color)
+{
+    color[src] = 1;
+    queue<int> q;
+    q.push(src);
+
+    while (!q.empty())
+    {
+        int u = q.front();
+        q.pop();
+
+        for (auto i : graph[u])
+        {
+            if (color[i] == -1)
+            {
+                // Assign alternate color to its neighbors.
+                color[i] = 1 - color[u];
+                q.push(i);
+            }
+            else if (color[i] == color[u])
+                return false; // If neighbor is of same color returnn false.
+        }
+    }
+    return true;
+}
+bool isBipartite(vector<vector<int>> &graph)
+{
+
+    int v = graph.size();
+
+    vector<int> color(v, -1);
+    for (int i = 0; i < v; i++)
+    {
+        if (color[i] == -1)
+        {
+            if (!bfs(i, graph, color))
+                return false;
+        }
+    }
+    return true;
 }
 
 // Driver code
