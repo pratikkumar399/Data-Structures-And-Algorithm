@@ -1,11 +1,11 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std ;
 
 int main(){
-    int n ;
-    cin>>n ;
+    int n = 10 ;
+    // cin>>n ;
     int m= n+10 ;
-    cout<<m<<n;
+    cout<<m<<n<<endl;
     
     return 0;
 }

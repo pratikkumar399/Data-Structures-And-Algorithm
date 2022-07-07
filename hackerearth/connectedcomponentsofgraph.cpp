@@ -62,7 +62,6 @@ int main()
         }
         cout << endl;
     }
-    int *ptr = new int[11];
 
     // cout << count << endl;
 }
