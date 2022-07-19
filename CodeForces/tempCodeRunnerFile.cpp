@@ -1,4 +1,8 @@
-   // if (m < 10)
-        // {
-        //     cout << 0 << endl;
-        // }
+if (a != b)
+        {
+            cout << "NO" << endl;
+        }
+        else
+        {
+            cout << "YES" << endl;
+        }
