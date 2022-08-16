@@ -78,10 +78,10 @@ int main()
 
     Node *head = takeinput_better();
     print(head);
-    int i, data;
-    cin >> i >> data;
-    insertNode(head, i, data);
-    print(head);
+    // int i, data;
+    // cin >> i >> data;
+    // insertNode(head, i, data);
+    // print(head);
     /*
     //Statically
     Node n1(1);

@@ -1,4 +1,4 @@
-> TopoLogical Sorting :  Linear ordering of the vertices such that is there is an edge u-> v , u  appears before v in the ordering .
+> TopoLogical Sorting :  Linear ordering of the vertices such that if there is an edge u-> v , u  appears before v in the ordering .
 Possible only for directed acyclic graphs .
 
 

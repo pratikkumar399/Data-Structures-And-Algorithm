@@ -45,7 +45,7 @@ void BFS(vector<int> adj[], int V)
 
         // Traverse the nodes adjacent to the currently
         // poped element and push those elements to the
-        // queue which are not already visited
+        // queue after marking them visited if are not already visited
         for (int i = 0; i < adj[node].size(); i++)
         {
             if (visited[adj[node][i]] == false)
