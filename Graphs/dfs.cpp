@@ -1,14 +1,14 @@
 // C++ program to print DFS traversal from
 // a given vertex in a  given graph
-#include<iostream>
-#include<list>
+#include <iostream>
+#include <list>
 using namespace std;
 
 // Graph class represents a directed graph
 // using adjacency list representation
 class Graph
 {
-    int V;    // No. of vertices
+    int V; // No. of vertices
 
     // Pointer to an array containing
     // adjacency lists
@@ -16,8 +16,9 @@ class Graph
 
     // A recursive function used by DFS
     void DFSUtil(int v, bool visited[]);
+
 public:
-    Graph(int V);   // Constructor
+    Graph(int V); // Constructor
 
     // function to add an edge to graph
     void addEdge(int v, int w);
@@ -47,10 +48,18 @@ void Graph::DFSUtil(int v, bool visited[])
 
     // Recur for all the vertices adjacent
     // to this vertex
-    list<int>::iterator i;
-    for (i = adj[v].begin(); i != adj[v].end(); ++i)
-        if (!visited[*i])
-            DFSUtil(*i, visited);
+
+    for (auto it : adj[v])
+    {
+        if (!visited[it])
+        {
+            DFSUtil(it, visited);
+        }
+    }
+    // list<int>::iterator i;
+    // for (i = adj[v].begin(); i != adj[v].end(); ++i)
+    //     if (!visited[*i])
+    //         DFSUtil(*i, visited);
 }
 
 // DFS traversal of the vertices reachable from v.

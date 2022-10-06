@@ -19,6 +19,7 @@ void heapify(int arr[] , int n , int i ){
     }
 }
 
+
 void insertNode(int arr[] , int& n , int key){
     n = n+1 ;
     arr[n-1] = key ;
