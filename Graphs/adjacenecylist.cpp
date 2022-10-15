@@ -15,7 +15,7 @@ int main()
         int u, v; // wt
         cin >> u >> v;
 
-        //   fir weighted graph
+        //   for weighted graph
         // cin>>u>>v>>wt ;
         // adj[u].push_back({v,wt});
         // adj[u].push_back({u,wt});

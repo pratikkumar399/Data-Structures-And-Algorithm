@@ -60,12 +60,39 @@ void BFS(vector<int> adj[], int V)
     }
 }
 
+vector<int> bfs(vector<int> adj[], int V)
+{
+    vector<int> visited(V + 1, 0);
+    visited[0] = 1;
+    queue<int> q;
+    q.push(0);
+    vector<int> bFs;
+    while (!q.empty())
+    {
+        int top = q.front();
+        q.pop();
+
+        bFs.push_back(top);
+
+        for (auto it : adj[top]) // iterating through every vector list at a particular node index
+        {
+            if (!visited[it])
+            {
+                visited[it] = 1;
+                q.push(it);
+            }
+        }
+    }
+    return bFs;
+
+    // tc ->  O(n) + o(2*e)
+}
+
 // dfs traversal for finding bipartite graph
 
 bool dfs(int n, vector<int> &visited, vector<vector<int>> &graph)
 {
-    if (visited[n] == -1)
-        visited[n] = 1;
+    visited[n] = 1;
     for (auto it : graph[n])
     {
         if (visited[it] == -1)
