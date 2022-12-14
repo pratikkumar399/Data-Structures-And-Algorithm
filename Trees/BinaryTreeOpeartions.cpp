@@ -84,7 +84,17 @@ vector<int> inOrder_Iterative(TreeNode *root)
 int widthOfBinaryTree(TreeNode *root)
 {
 
+    if (root == NULL)
         return 0;
+
+    // so basically what we need to do when we are finding the height of  a binary tree is that we need to find the reght height of the binary
+    //  tree  and then we can find the height of the left tree and then return the max of them while considering the root also that is why we add 1 to
+    // the return value
+
+    int leftHeight = widthOfBinaryTree(root->left);
+    int rightHeight = widthOfBinaryTree(root->right);
+
+    return max(leftHeight, leftHeight) + 1;
 }
 
 bool isSymmetric_bfs_iterative(TreeNode *root)

@@ -3,19 +3,19 @@
 using namespace std;
 
 /* Link list node */
-class Node {
+class Node
+{
 public:
 	int data;
-	Node* next;
+	Node *next;
 };
-
 /* Given a reference (pointer to pointer) to the head
 of a list and an int, push a new node on the front
 of the list. */
-void push(Node** head_ref, int new_data)
+void push(Node **head_ref, int new_data)
 {
 	/* allocate node */
-	Node* new_node = new Node();
+	Node *new_node = new Node();
 
 	/* put in the data */
 	new_node->data = new_data;
@@ -29,11 +29,12 @@ void push(Node** head_ref, int new_data)
 
 /* Counts the no. of occurrences of a node
 (search_for) in a linked list (head)*/
-int count(Node* head, int search_for)
+int count(Node *head, int search_for)
 {
-	Node* current = head;
+	Node *current = head;
 	int count = 0;
-	while (current != NULL) {
+	while (current != NULL)
+	{
 		if (current->data == search_for)
 			count++;
 		current = current->next;
@@ -45,7 +46,7 @@ int count(Node* head, int search_for)
 int main()
 {
 	/* Start with the empty list */
-	Node* head = NULL;
+	Node *head = NULL;
 
 	/* Use push() to construct below list
 	1->2->1->3->1 */
