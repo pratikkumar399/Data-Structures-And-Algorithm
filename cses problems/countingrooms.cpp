@@ -7,10 +7,14 @@ vector<vector<bool>> visited;
 int dx[] = {-1, 1, 0, 0};
 int dy[] = {0, 0, -1, 1};
 
+// checking the boundaries of the rooms
 bool isValid(int x, int y)
 {
+    // if the boundaries exceed the wall then we have to neglect it
+
     if (x < 0 or x >= n or y < 0 or y >= m)
         return false;
+    // adding the visited condition also alognwith
     if (visited[x][y])
         return false;
     return true;

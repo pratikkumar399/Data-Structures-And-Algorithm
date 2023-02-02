@@ -41,19 +41,24 @@ Node *takeinput()
 
 Node *delete_lastnode(Node **head)
 {
-   Node * temp = NULL; 
-   Node * current = *head ;
-   if (*head == NULL){
-       return NULL;
-   } 
+    Node *temp = NULL;
+    Node *current = *head;
 
-   while ( current-> next ){
-       temp = current ;
-       current = current-> next ; 
-   }
-   temp->next = NULL ;
-   delete(current);
-   return *head;
+    // so if the head is already null then we have to simply return null
+    if (*head == NULL)
+    {
+        return NULL;
+    }
+
+    // otherwise move upto the secone last element and remove the last element
+    while (current->next)
+    {
+        temp = current;
+        current = current->next;
+    }
+    temp->next = NULL;
+    delete (current);
+    return *head;
 }
 void print(Node *head)
 {

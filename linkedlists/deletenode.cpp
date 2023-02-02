@@ -52,7 +52,6 @@ void deleteNode_begin(Node **head)
     return;
 }
 
-
 void print(Node *head)
 {
     Node *temp = head;

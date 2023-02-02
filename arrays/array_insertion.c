@@ -3,7 +3,7 @@
 int main()
 {
 
-    int array[50], position, index , n, insertion_value;
+    int array[50], position, index, n, insertion_value;
 
     printf("no of elements : ");
     scanf("%d", &n);

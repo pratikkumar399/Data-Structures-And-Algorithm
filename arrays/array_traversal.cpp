@@ -15,28 +15,25 @@ int Insertion(int array[], int size, int element, int capacity, int index)
     array[index] = element;
     return 1;
 }
-void a_delete(int arr[] , int size , int pos){
- 
-    pos-- ;
+void a_delete(int arr[], int size, int pos)
+{
+
+    pos--;
     for (int i = pos; i < size; i++)
     {
         arr[i] = arr[i + 1];
     }
-    for (int i = 0; i < size-1 ; i++)
+    for (int i = 0; i < size - 1; i++)
     {
         cout << arr[i] << " ";
     }
     cout << endl;
-
 }
-
-
-
 
 void display(int arr[], int n)
 {
 
-    for (int i = 0; i < n ; i++)
+    for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
     }
@@ -50,10 +47,10 @@ int main()
     int element = 45;
 
     display(array, size);
-    Insertion(array, size, element, 100, index);
+    Insertion(array, size, element, 100, 0);
     size += 1;
     display(array, size);
-    a_delete(array , size , index) ;
-    
+    a_delete(array, size, 1);
+
     return 0;
 }
