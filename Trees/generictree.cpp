@@ -128,6 +128,30 @@ void traversal(Node *node)
     // cout << "Node Post " << node->data << endl;
 }
 
+void levelorder_linewise(Node *root)
+{
+    queue<Node *> q;
+    q.push(root);
+    queue<Node *> child;
+
+    while (!q.empty())
+    {
+        Node *t = q.front();
+        q.pop();
+        cout << t->data << " ";
+        for (auto c : t->children)
+        {
+            child.push(c);
+        }
+
+        if (q.size() == 0)
+        {
+            cout << endl;
+            swap(q, child);
+        }
+    }
+}
+
 int main()
 {
 
@@ -142,7 +166,7 @@ int main()
     cout << size(root) << endl;
     cout << maxi(root) << endl;
     cout << height(root) << endl;
-    traversal(root);
+    levelorder_linewise(root);
 
     return 0;
 }
