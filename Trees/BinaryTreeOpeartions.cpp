@@ -218,6 +218,42 @@ void topView(TreeNode *root, int hori_dist, int level, map<int, pair<int, int>> 
     topView(root->right, hori_dist + 1, level + 1, m);
 }
 
+vector<int> topView(TreeNode *root)
+{
+    // Your code here
+    vector<int> ans;
+    if (root == NULL)
+        return {};
+    queue<pair<TreeNode *, int>> q;
+    q.push({root, 0});
+    map<int, int> mp;
+    while (!q.empty())
+    {
+        auto it = q.front();
+        q.pop();
+        TreeNode *node = it.first;
+        int line = it.second;
+        if (mp.count(line) == 0)
+            mp[line] = node->val;
+
+        if (node->left != NULL)
+        {
+            q.push({node->left, line - 1});
+        }
+        if (node->right != NULL)
+        {
+            q.push({node->right, line + 1});
+        }
+    }
+
+    for (auto it : mp)
+    {
+        ans.push_back(it.second);
+    }
+
+    return ans;
+}
+
 void bottomview(TreeNode *root, int distance, int level, map<int, pair<int, int>> &m)
 {
     if (root == NULL)
