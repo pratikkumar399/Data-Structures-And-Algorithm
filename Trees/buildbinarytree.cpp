@@ -212,6 +212,42 @@ bool isSymmetric(Node *p, Node *q)
     return isSymmetric(p->left, q->right) && (p->right, q->left);
 }
 
+vector<int> topView(Node *root)
+{
+    // Your code here
+    vector<int> ans;
+    if (root == NULL)
+        return {};
+    queue<pair<Node *, int>> q;
+    q.push({root, 0});
+    map<int, int> mp;
+    while (!q.empty())
+    {
+        auto it = q.front();
+        q.pop();
+        Node *node = it.first;
+        int line = it.second;
+        if (mp.count(line) == 0)
+            mp[line] = node->val;
+
+        if (node->left != NULL)
+        {
+            q.push({node->left, line - 1});
+        }
+        if (node->right != NULL)
+        {
+            q.push({node->right, line + 1});
+        }
+    }
+
+    for (auto it : mp)
+    {
+        ans.push_back(it.second);
+    }
+
+    return ans;
+}
+
 int main()
 {
     // BinaryTree tree;
