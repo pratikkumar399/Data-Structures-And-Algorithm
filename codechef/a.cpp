@@ -3,29 +3,22 @@ using namespace std;
 
 int main()
 {
-    int t;
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cin >> t;
-    while (t--)
+    int l, w;
+    cin >> l >> w;
+    vector<int> ar(l * w);
+    for (auto &x : ar)
+        cin >> x;
+    int h;
+    cin >> h;
+    pair<int, int> res = {-1, -1};
+    int i;
+    for (i = 1; i < l * w; i++)
     {
-        int a;
-        cin >> a;
-
-        int res = 1;
-
-        int sol = a;
-        for (int i = 0; i < a; ++i)
-        {
-            if (i % 2 == 0)
-            {
-                cout << sol-- << " ";
-            }
-            else
-                cout << res++ << " ";
-        }
-        cout << endl;
+        if (ar[i] >= h && ar[i - 1] <= h)
+            res = {i / w, i % w};
     }
-
+    if (res.first == -1 && res.second == -1)
+        res = {l - 1, w - 1};
+    cout << res.first << ' ' << res.second;
     return 0;
 }
