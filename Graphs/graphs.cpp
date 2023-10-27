@@ -42,7 +42,8 @@ void dfs(vector<vector<int>> &adj, vector<int> visited, int source)
     }
 }
 
-void cycle_detectioon(vector<vector<int>> &graph, vector<int> visited, int source)
+// for directed graph using bfs
+void cycle_detection(vector<vector<int>> &graph, vector<int> visited, int source)
 {
     queue<pair<int, int>> q;
     q.push({source, -1});

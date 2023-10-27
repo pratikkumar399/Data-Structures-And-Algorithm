@@ -1,7 +1,3 @@
-
-// C++ program to implement BFS traversal
-// of a Graph
-
 #include <bits/stdc++.h>
 using namespace std;
 
