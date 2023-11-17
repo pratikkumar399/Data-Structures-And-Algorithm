@@ -47,19 +47,23 @@ public:
 
     void insert(int val)
     {
+        // checking if the first node is a null pointer or not
         if (root == nullptr)
         {
+            // if it is a null pointer then we will create a new node and assign it to the root
             root = new Node(val);
             return;
         }
+        // traverse the tree and insert the node at the first available position
         queue<Node *> q;
         q.push(root);
 
         while (!q.empty())
         {
+            // taking the front element of the queue
             auto top = q.front();
             q.pop();
-
+            // checking if the left or the right child of the node is a null pointer or not
             if (top->left == nullptr)
             {
                 top->left = new Node(val);
@@ -70,41 +74,11 @@ public:
                 top->right = new Node(val);
                 return;
             }
+            // if the left and the right child of the node is not a null pointer then we will push the left and the right child of the node in the queue -> this will help us to traverse the tree
             else
             {
                 q.push(top->left);
                 q.push(top->right);
-            }
-        }
-    }
-
-    void levelorderTraversal(Node *root)
-    {
-        queue<Node *> q;
-        q.push(root);
-        q.push(nullptr);
-
-        while (!q.empty())
-        {
-            auto front = q.front();
-
-            q.pop();
-
-            if (front == nullptr)
-            {
-                cout << endl;
-                if (!q.empty())
-                {
-                    q.push(nullptr);
-                }
-            }
-            else
-            {
-                cout << front->val << " ";
-                if (front->left)
-                    q.push(front->left);
-                if (front->right)
-                    q.push(front->right);
             }
         }
     }
@@ -113,26 +87,32 @@ public:
 void levelorderTraversal(Node *root)
 {
     queue<Node *> q;
+    // pushing the root node in the queue to start the traversal
     q.push(root);
+    // Pushing a nullptr to indicate the end of the first level
     q.push(nullptr);
 
     while (!q.empty())
     {
         auto front = q.front();
-
         q.pop();
 
         if (front == nullptr)
         {
+            // A nullptr indicates the end of a level, so we print a new line
             cout << endl;
             if (!q.empty())
             {
+                // If there are more nodes in the queue, push another nullptr to
+                // separate the next level.
                 q.push(nullptr);
             }
         }
         else
         {
+            // If the front node is not nullptr, print its value
             cout << front->val << " ";
+            // Enqueue the left and right child nodes if they exist
             if (front->left)
                 q.push(front->left);
             if (front->right)
@@ -250,7 +230,7 @@ vector<int> topView(Node *root)
 
 int main()
 {
-    // BinaryTree tree;
+    BinaryTree tree;
     // tree.insert(1);
     // tree.insert(2);
     // tree.insert(3);
@@ -262,18 +242,18 @@ int main()
     // tree.levelorderTraversal(tree.root);
 
     Node *root = nullptr;
-    root = buildTree(root);
+    // root = buildTree(root);
+    tree.insert();
+    levelorderTraversal(root);
+    // vector<vector<int>> level_order = zigzagLevelOrder(root);
 
-    // levelorderTraversal(root);
-    vector<vector<int>> level_order = zigzagLevelOrder(root);
-
-    for (auto it : level_order)
-    {
-        for (auto i : it)
-        {
-            cout << i << " " << endl;
-        }
-    }
+    // for (auto it : level_order)
+    // {
+    //     for (auto i : it)
+    //     {
+    //         cout << i << " " << endl;
+    //     }
+    // }
 
     return 0;
 }
