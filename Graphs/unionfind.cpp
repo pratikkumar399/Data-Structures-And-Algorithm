@@ -1,70 +1,73 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
-int parent[100000];
-vector<int> rank;
-int n;
-
-void makeSet(int rank[])
+class UnionFind
 {
-    for (int i = 1; i <= n; i++)
-    {
-        parent[i] = i;
-        rank[i] = 0;
-    }
-}
+private:
+    vector<int> parent;
+    vector<int> rank;
 
-int findPar(int node)
-{
-    if (node == parent[node])
+public:
+    UnionFind(int n)
     {
-        return node;
-    }
+        parent.resize(n);
+        rank.resize(n, 0);
 
-    return parent[node] = findPar(parent[node]);
-}
-
-void union_H(int u, int v)
-{
-    int rank[n];
-    u = findPar(u);
-    v = findPar(v);
-
-    if (rank[u] < rank[v])
-    {
-        parent[u] = v;
-    }
-    else if (rank[u] < rank[v])
-    {
-        parent[v] = u;
-    }
-    else
-    {
-        parent[v] = u;
-        rank[u]++;
-    }
-}
-
-int main()
-{
-    int t;
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cin >> t;
-    while (t--)
-    {
-        int u, v;
-        union_H(u, v);
+        for (int i = 0; i < n; ++i)
+        {
+            parent[i] = i;
+        }
     }
 
-    if (findPar(2) != findPar(3))
+    int findPar(int v)
     {
-        cout << "Different component " << endl;
-    }
-    else
-    {
-        cout << "Same Component" << endl;
+        if (v == parent[v])
+            return v;
+        return parent[v] = findPar(parent[v]);
     }
 
-    return 0;
-}
+    void rankUnion(int u, int v)
+    {
+        u = findPar(u);
+        v = findPar(v);
+        if (u != v)
+        {
+            if (rank[u] < rank[v])
+            {
+                swap(u, v);
+            }
+            parent[v] = u;
+            if (rank[u] == rank[v])
+            {
+                rank[u]++;
+            }
+        }
+    };
+
+    int main()
+    {
+        int n, t;
+        cin >> n >> t;
+
+        UnionFind uf(n);
+
+        while (t--)
+        {
+            int u, v;
+            cin >> u >> v;
+            uf.rankUnion(u, v);
+        }
+
+        if (uf.findPar(2) != uf.findPar(3))
+        {
+            cout << "Different component\n";
+        }
+        else
+        {
+            cout << "Same Component\n";
+        }
+
+        return 0;
+    }

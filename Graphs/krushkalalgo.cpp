@@ -31,18 +31,17 @@ void unionn(int u, int v, vector<int> &parent, vector<int> &rank)
 {
     u = findPar(u, parent);
     v = findPar(v, parent);
-    if (rank[u] > rank[v])
+    if (u != v)
     {
+        if (rank[u] < rank[v])
+        {
+            swap(u, v);
+        }
         parent[v] = u;
-    }
-    else if (rank[u] < rank[v])
-    {
-        parent[u] = v;
-    }
-    else
-    {
-        parent[v] = u;
-        rank[u]++;
+        if (rank[u] == rank[v])
+        {
+            rank[u]++;
+        }
     }
 }
 

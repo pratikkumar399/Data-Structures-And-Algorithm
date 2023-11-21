@@ -93,7 +93,7 @@ int main()
     {
         if (!visited[i])
         {
-            bfsTraversal(adj, visited, i);
+            dfs(adj, visited, i);
         }
     }
 
