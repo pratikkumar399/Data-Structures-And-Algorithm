@@ -17,14 +17,22 @@ int main()
 
     dp[0] = 1;
 
+    set<int> s;
+
     for (int i = 1; i <= target; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            // possible only if the target is greater than the coin value
-            if (i >= coins[j])
+            if (i - coins[j] >= 0)
             {
-                dp[i] += dp[i - coins[j]] % 1000000007;
+                if (!s.count(dp[i - coins[j]]))
+                {
+                    dp[i] += dp[i - coins[j]];
+                }
+                else
+                    continue;
+                s.insert(dp[i - coins[j]]);
+                dp[i] %= 1000000007;
             }
         }
     }
