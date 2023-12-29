@@ -37,19 +37,17 @@ vector<int> inOrder_Iterative(TreeNode *root)
     vector<int> inorder;
     TreeNode *node = root;
     stack<TreeNode *> st;
-    while (true)
+    while (node != NULL || !st.empty())
     {
         if (node != NULL)
         {
-
             st.push(node);
             node = node->left;
         }
 
         else
         {
-            if (st.empty() == true)
-                break;
+            // store the topmost element in the stack
             node = st.top();
             st.pop();
             inorder.push_back(node->val);
@@ -57,6 +55,33 @@ vector<int> inOrder_Iterative(TreeNode *root)
         }
     }
     return inorder;
+}
+
+void inOrder_Iterative_V(TreeNode *root)
+{
+
+    TreeNode *node = root;
+    stack<TreeNode *> st;
+    while (true)
+    {
+        if (node != NULL)
+        {
+            st.push(node);
+            node = node->left;
+        }
+
+        else
+        {
+
+            if (st.empty())
+                break;
+            // store the topmost element in the stack
+            node = st.top();
+            st.pop();
+            cout << node->val << " ";
+            node = node->right;
+        }
+    }
 }
 
 vector<int> preOrderTraversal_Iterative(TreeNode *root)
@@ -72,13 +97,59 @@ vector<int> preOrderTraversal_Iterative(TreeNode *root)
     {
         root = st.top();
         st.pop();
-        preorder.push_back(root->val);
+        cout << root->val << " ";
         if (root->right != NULL)
             st.push(root->right);
         if (root->left != NULL)
             st.push(root->left);
     }
     return preorder;
+}
+
+void preorderIterative(TreeNode *root)
+{
+    if (root == NULL)
+        return;
+    stack<TreeNode *> st;
+    st.push(root);
+
+    while (!st.empty())
+    {
+        root = st.top();
+        st.pop();
+        cout << root->val << " ";
+        if (root->right != NULL)
+            st.push(root->right);
+        if (root->left != NULL)
+            st.push(root->left);
+    }
+}
+
+void postOrderIterative(TreeNode *root)
+{
+
+    if (root == NULL)
+        return;
+    stack<TreeNode *> st;
+    st.push(root);
+    stack<int> out;
+
+    while (!st.empty())
+    {
+        TreeNode *curr = st.top();
+        st.pop();
+        out.push(curr->val);
+        if (curr->left)
+            st.push(curr->left);
+        if (curr->right)
+            st.push(curr->right);
+    }
+
+    while (!out.empty())
+    {
+        cout << out.top() << " ";
+        out.pop();
+    }
 }
 
 int widthOfBinaryTree(TreeNode *root)

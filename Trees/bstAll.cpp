@@ -33,10 +33,74 @@ Node *insert(Node *root, int data)
     return root;
 }
 
+Node *deleteNode(Node *root, int data)
+{
+    if (root == NULL)
+        return NULL;
+
+    if (data < root->data)
+    {
+        root->left = deleteNode(root->left, data);
+    }
+    else if (data > root->data)
+    {
+        root->right = deleteNode(root->right, data);
+    }
+    else
+    {
+        if (root->left == NULL && root->right == NULL)
+        {
+            delete root;
+            return NULL;
+        }
+        else if (root->left == NULL)
+        {
+            Node *temp = root->right;
+            delete root;
+            return temp;
+        }
+        else if (root->right == NULL)
+        {
+            Node *temp = root->left;
+            delete root;
+            return temp;
+        }
+        else
+        {
+            Node *temp = root->right;
+            while (temp->left != NULL)
+            {
+                temp = temp->left;
+            }
+            root->data = temp->data;
+            root->right = deleteNode(root->right, temp->data);
+        }
+    }
+    return root;
+}
+
 bool search(Node *root, int target)
 {
     if (root == NULL)
         return false;
+    Node *temp = root;
+
+    while (temp != NULL)
+    {
+        if (temp->data == target)
+        {
+            return true;
+        }
+        else if (temp->data > target)
+        {
+            temp = temp->left;
+        }
+        else
+        {
+            temp = temp->right;
+        }
+    }
+    return false;
 }
 
 void print(Node *root)

@@ -24,6 +24,7 @@ int main()
 
     bool arr1[10000000];
 
+    // stl array
     array<int, 5> arr;
     arr.fill(10);
 
@@ -64,7 +65,7 @@ int main()
 
     // back elememt of the array
 
-    cout << lem.back() << endl; //arr.at(arr.size()-1) ;
+    cout << lem.back() << endl; // arr.at(arr.size()-1) ;
 
     // <<<<<<<<<<--------------------------->>>>>>>>>>>>>>>>>>>>>*******
 
@@ -115,7 +116,7 @@ int main()
 
     // begin() , end() , rbegin() , rend()
 
-    //to define 2d vector
+    // to define 2d vector
 
     vector<vector<int>> vec12;
 
@@ -206,14 +207,14 @@ int main()
             // insert operation takes log(n)  time where n is the size of the set
             // so if the size of the set is 3 then the time taken is log(3);
         }
-        st.erase(5); //st.erase(key) //deletes the key element from the set
-        //st-> {2,3,4}
-        // erase functionality
-        // log n
+        st.erase(5); // st.erase(key) //deletes the key element from the set
+        // st-> {2,3,4}
+        //  erase functionality
+        //  log n
 
         st.erase(st.begin()); // st.erase(iterator) // s-> {3,4}
 
-        st.erase(st.begin(), st.end()); //st.erase(startiterator , enditerator)
+        st.erase(st.begin(), st.end()); // st.erase(startiterator , enditerator)
 
         // set will only stores unique element
         // we cannot insert an element in the set if the element already exists in the set and
@@ -224,12 +225,12 @@ int main()
         set<int> st = {1, 5, 7, 8};
 
         set<int> set1(st.begin(), st.end());
-        auto itt = st.find(7); //log n //itt will be the iterator to 7
+        auto itt = st.find(7); // log n //itt will be the iterator to 7
 
         auto ittt = st.find(9); // ittt will point tot st.end()
         st.count(1);
 
-        st.emplace(6); //alternative of st.insert() but faster
+        st.emplace(6); // alternative of st.insert() but faster
         cout << st.size() << endl;
 
         for (auto it = st.begin(); it != st.end(); it++)
@@ -242,20 +243,20 @@ int main()
             cout << it << endl;
         }
 
-        // the following code prints the largest element in the set 
-        auto itt  = st.end() ; itt-- ;
-        cout<<*itt<<endl;
-        auto itt1  = st.find(2) ; 
-        if(itt1 == st.end() ){
-            cout<<"X is not found " <<endl ;
+        // the following code prints the largest element in the set
+        auto itt = st.end();
+        itt--;
+        cout << *itt << endl;
+        auto itt1 = st.find(2);
+        if (itt1 == st.end())
+        {
+            cout << "X is not found " << endl;
         }
 
         st.erase(st.begin(), st.end()); // makes sure the entire set is deleted
         set<node> st;
 
         //  the function find(x)  returns an iterraror thar point  to n elements whose valye is x . Howeveer if the set doesnt contain x , the iterator will be end  ;
-
-
 
         unordered_set<int> st; // elements will be stored in any order
 
@@ -276,14 +277,14 @@ int main()
         ms.insert(3);
         ms.insert(4); // ms.emplace(4)
 
-        //multiset helps to insert all the elements in the sorted order
-        // unline set multiset contains duplicate elements also
-        // to erase all the instances use the erase tool
-        ms.erase(2); //all the instances of 2 will be erased
+        // multiset helps to insert all the elements in the sorted order
+        //  unline set multiset contains duplicate elements also
+        //  to erase all the instances use the erase tool
+        ms.erase(2); // all the instances of 2 will be erased
 
         auto it12 = ms.find(1); // returns an iterator pointing to the first elements of 1 ;
 
-        ms.clear(); //deletes all the set
+        ms.clear(); // deletes all the set
 
         ms.erase(ms.begin(), ms.end()); // log n in size
 
@@ -298,7 +299,7 @@ int main()
             cout << it123 << endl;
         } //
         // to erase a particular instances use the follwing syntax a
-        ms.erase(ms.find(2)); //this will find the instances of 2 and delete them from the set of
+        ms.erase(ms.find(2)); // this will find the instances of 2 and delete them from the set of
 
         string a = "pratik";
         string b = a + a; // concatenates the string a with itself and stores in the b string therefore the result is pratikpratik
@@ -343,18 +344,17 @@ int main()
 
         vector<int> v;
         sort(v.begin(), v.end());
-        reverse(v.begin() , v.end()) ;
-        random_shuffle(v.begin() , v.end()) ;
+        reverse(v.begin(), v.end());
+        random_shuffle(v.begin(), v.end());
 
+        // the usage of bistset to represent arrays helps us in saving a lot of memeory
+        bitset<10> s(string("0010011010"));
+        cout << s.count() << endl;
 
-        // the usage of bistset to represent arrays helps us in saving a lot of memeory 
-        bitset<10>  s(string("0010011010")) ;
-        cout<<s.count() <<endl ;
+        // the following code shows examples of using bit operatrions
 
-        // the following code shows examples of using bit operatrions 
-
-        bitset<10> a(string("0010110110")) ;
-        bitset<10> b(string("1011011000")) ;
+        bitset<10> a(string("0010110110"));
+        bitset<10> b(string("1011011000"));
 
         // cout<<(a & b) << endl ;
         // cout<<(a|b) <<endl ;
