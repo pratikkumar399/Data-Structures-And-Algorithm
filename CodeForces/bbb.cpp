@@ -18,20 +18,26 @@ int main()
         {
             cin >> arr[i];
         }
-
-        if (is_sorted(arr.begin(), arr.end()))
+        int ans = 0;
+        if (n == 1)
         {
-            cout << "YES" << endl;
+            int x = arr[0] - 0;
+            int y = k - arr[0];
+            int maxi = max(x, 2 * y);
+            cout << maxi << endl;
             continue;
         }
-        if (k == 1)
+
+        int maxi = arr[0] - 0;
+        for (int i = 1; i < n; i++)
         {
-            cout << "NO" << endl;
+            ans = arr[i] - arr[i - 1];
+            maxi = max(maxi, ans);
         }
-        else
-        {
-            cout << "YES" << endl;
-        }
+        int last = k - arr[n - 1];
+        maxi = max(maxi, 2 * last);
+
+        cout << maxi << endl;
     }
     return 0;
 }
