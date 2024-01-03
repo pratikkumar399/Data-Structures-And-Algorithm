@@ -10,34 +10,33 @@ int main()
 
     while (t--)
     {
-        int n, k;
-        cin >> n >> k;
+        int n;
+        cin >> n;
+        string str;
+        cin >> str;
+        int count1 = 0;
 
-        vector<int> arr(n);
-        for (int i = 0; i < n; i++)
-        {
-            cin >> arr[i];
-        }
-        int ans = 0;
-        if (n == 1)
-        {
-            int x = arr[0] - 0;
-            int y = k - arr[0];
-            int maxi = max(x, 2 * y);
-            cout << maxi << endl;
-            continue;
-        }
+        int dotCount = count(str.begin(), str.end(), '.');
 
-        int maxi = arr[0] - 0;
-        for (int i = 1; i < n; i++)
+        for (auto it : str)
         {
-            ans = arr[i] - arr[i - 1];
-            maxi = max(maxi, ans);
+            if (count1 >= 3)
+                break;
+            if (it == '.')
+            {
+                count1++;
+            }
+            else
+            {
+                count1 = 0;
+            }
         }
-        int last = k - arr[n - 1];
-        maxi = max(maxi, 2 * last);
-
-        cout << maxi << endl;
+        if (count1 >= 3)
+            cout << 2 << endl;
+        else
+        {
+            cout << dotCount << endl;
+        }
     }
     return 0;
 }
