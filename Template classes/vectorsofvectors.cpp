@@ -1,41 +1,47 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
+
 using namespace std;
-void printVect(vector<int> &v)
-{
-    cout << "size : " << v.size() << endl;
-    for (int i = 0; i < v.size(); i++)
-    {
-        cout << v[i] << " ";
-    }
-    cout << endl;
-}
 
 int main()
 {
-    // in vectors number of rows are fixed but the number of col v aries
-    // we can say that the length of the the vectors vary , and it behaves as  2d vector
-    //  so if we want to vary the number of rows then we can use vector of vectors number
     int N;
-    cin >> N;
+    cin >> N; // Uncomment to take input for N
     vector<vector<int>> v;
 
-    for (int i = 0; i < N; i++)
+    int arrr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    vector<vector<string>> v2(3);
+
+    vector<vector<int>> v1(N, vector<int>(N)); // 2d vector of size N x 2 and all the elements are 10
+
+    vector<int> arr1[N]; // Using N for array size
+
+    for (int i = 0; i < N; ++i)
     {
-        int n;
-        cin >> n;
-        vector<int> temp;
-        for (int j = 0; j < n; j++)
+        // vector<int> temp(3);
+        // for (auto &val : temp)
+        // {
+        //     cin >> val;
+        // }
+        // arr1[i] = temp;
+
+        for (int j = 0; j < N; j++)
         {
-            int x;
-            cin >> x;
-            temp.push_back(x);
+            cin >> v1[i][j];
         }
-
-        v.push_back(temp);
     }
+    // [ [], [], [] ];
 
-    for(int i = 0; i < v.size(); i++){
-        printVect(v[i]) ;
+    cout << "*********************" << endl;
+
+    for (const auto &it : v1)
+    {
+        for (auto i : it)
+        {
+            cout << i << " ";
+        }
+        cout << endl;
     }
 
     return 0;
