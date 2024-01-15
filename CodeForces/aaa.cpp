@@ -10,28 +10,30 @@ int main()
 
     while (t--)
     {
-        // coordinates of square as input
-        int n;
-        cin >> n;
-        string str, stt;
-        cin >> str >> stt;
-        // now we need to find how many pairs are there of 01 and 10
-        int i = 0, j = 0;
-        int count1 = 0, count2 = 0;
-        while (i < str.size())
+
+        long long n, f, a, b;
+        cin >> n >> f >> a >> b;
+        vector<int> arr(n);
+        for (auto &it : arr)
+            cin >> it;
+        bool flag = false;
+        long long prev = 0;
+        for (int i = 0; i < n; i++)
         {
-            if (str[i] == '1' && stt[j] == '0')
+            long long chargeCount = (arr[i] - prev) * a;
+            prev = arr[i];
+            long long mini = min(chargeCount, b);
+            f -= mini;
+            if (f <= 0)
             {
-                count1++;
+                flag = true;
+                break;
             }
-            else if (str[i] == '0' && stt[j] == '1')
-            {
-                count2++;
-            }
-            i++;
-            j++;
         }
-        cout << max(count1, count2) << endl;
+        if (flag == true)
+            cout << "No" << endl;
+        else
+            cout << "Yes" << endl;
     }
 
     return 0;
