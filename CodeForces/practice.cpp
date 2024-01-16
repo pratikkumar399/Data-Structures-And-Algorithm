@@ -13,15 +13,14 @@ int main()
     {
         int n;
         cin >> n;
+        vector<int> v(n);
+        for (auto &it : v)
+            cin >> it;
 
-        if (n % 3 == 1 or n % 3 == 2)
-        {
-            cout << "First" << endl;
-        }
-        else if (n % 3 == 0)
-        {
-            cout << "Second" << endl;
-        }
+        if (v[0] == 1)
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
     }
 
     return 0;
