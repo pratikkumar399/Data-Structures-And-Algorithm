@@ -1,41 +1,43 @@
 #include <bits/stdc++.h>
-using namespace std ;
-struct Stack
+using namespace std;
+
+class Stack
 {
+public:
     int size;
     int top;
     int *S;
 };
-void create(struct Stack *st)
+void create( Stack *st)
 {
-   cout<<"Enter Size ";
-    cin>>st->size;
+    cout << "Enter Size ";
+    cin >> st->size;
     st->top = -1;
     st->S = new int[st->size];
 }
-void Display(struct Stack st)
+void Display( Stack st)
 {
     int i;
     for (i = 0; i <= st.top; i++)
-        cout<< st.S[i]<<" ";
-    cout<<endl;
+        cout << st.S[i] << " ";
+    cout << endl;
 }
-void push(struct Stack *st, int x)
-{   
-    
+void push( Stack *st, int x)
+{
+
     if (st->top == st->size - 1)
-    cout<<"Stack overflow" <<endl;
+        cout << "Stack overflow" << endl;
     else
     {
         st->top++;
         st->S[st->top] = x;
     }
 }
-int pop(struct Stack *st)
+int pop( Stack *st)
 {
     int x = -1;
     if (st->top == -1)
-       cout<<"Stack Underflow"<<endl;
+        cout << "Stack Underflow" << endl;
     else
     {
         x = st->S[st->top--];
@@ -43,11 +45,9 @@ int pop(struct Stack *st)
     return x;
 }
 
-
-
 int main()
 {
-    struct Stack st;
+    Stack st;
     create(&st);
     push(&st, 10);
     push(&st, 20);
@@ -55,6 +55,6 @@ int main()
     push(&st, 40);
 
     Display(st);
-    cout<<pop(&st);
+    cout << pop(&st);
     return 0;
 }

@@ -12,7 +12,6 @@ public:
 
     bool push(int x);
     int pop();
-
     bool isempty();
 };
 

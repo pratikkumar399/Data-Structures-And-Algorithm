@@ -15,6 +15,7 @@ int main(){
     s.push(30) ;
     s.push(20) ;
     s.push(40) ;
+    s.size();
     // s.pop() ;
     cout<<"The stack is : " ;
     display_stack(s) ;
