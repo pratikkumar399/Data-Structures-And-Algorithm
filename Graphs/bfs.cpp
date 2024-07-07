@@ -69,6 +69,9 @@ vector<int> bfs(vector<int> adj[], int V)
         q.pop();
 
         bFs.push_back(top);
+        // adj[5] -> /{ 1 , 2, 3 , 4 ,5}
+        // adj[5] -> 1 if(visited[1] == 0) {
+        //  visited[1] = 1 , queue.push(1)}
 
         for (auto it : adj[top]) // iterating through every vector list at a particular node index
         {

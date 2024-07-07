@@ -121,6 +121,29 @@ void levelorderTraversal(Node *root)
     }
 }
 
+
+vector<vector<int>> levelOrder(Node* root){
+    if(root == nullptr) return {{}};
+    vector<vector<int>> treeLevels;
+    queue<Node*> q;
+    q.push(root);
+    while(!q.empty()){
+        vector<int>ans;
+       
+        int size = q.size();
+        for(int i = 0 ; i < size; i++){
+            auto top = q.front();
+            q.pop();
+            if(top->left) q.push(top->left);
+            if(top->right) q.push(top->right);
+            ans.push_back(top->val);
+        }
+        treeLevels.push_back(ans);
+     }
+
+     return treeLevels;
+}
+
 vector<vector<int>> zigzagLevelOrder(Node *root)
 {
     vector<vector<int>> ans;
@@ -242,8 +265,8 @@ int main()
     // tree.levelorderTraversal(tree.root);
 
     Node *root = nullptr;
-    // root = buildTree(root);
-    tree.insert();
+    root = buildTree(root);
+    // tree.insert();
     levelorderTraversal(root);
     // vector<vector<int>> level_order = zigzagLevelOrder(root);
 
